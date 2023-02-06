@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'vct_python3'
+    ports:
+      - "5000:5000"
+    working_dir: '/root/opt'
+    tty: true
+    volumes:
+      - ./app:/root/opt
